@@ -1,6 +1,6 @@
 package com.huyanqiu.springbootall.service;
 
-import com.huyanqiu.springbootall.domain.User;
+import com.huyanqiu.springbootall.domain.base.User;
 import com.huyanqiu.springbootall.domain.vo.SysResult;
 
 public interface UserService {

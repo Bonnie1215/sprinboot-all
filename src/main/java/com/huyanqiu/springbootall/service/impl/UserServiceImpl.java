@@ -3,7 +3,7 @@ package com.huyanqiu.springbootall.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.huyanqiu.springbootall.domain.User;
+import com.huyanqiu.springbootall.domain.base.User;
 import com.huyanqiu.springbootall.domain.vo.SysResult;
 import com.huyanqiu.springbootall.mapper.UserMapper;
 import com.huyanqiu.springbootall.service.UserService;

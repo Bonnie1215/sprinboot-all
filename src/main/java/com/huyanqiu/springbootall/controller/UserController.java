@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.huyanqiu.springbootall.domain.User;
+import com.huyanqiu.springbootall.domain.base.User;
 import com.huyanqiu.springbootall.domain.vo.SysResult;
 import com.huyanqiu.springbootall.service.UserService;
 
