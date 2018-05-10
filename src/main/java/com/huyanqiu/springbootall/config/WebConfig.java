@@ -6,14 +6,12 @@ import java.util.List;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -28,15 +26,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
  */
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter{
-	/**
-	 * 修改默认的欢迎页面（默认为index.html）
-	 */
-	@Override
-	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("redirect:/login.html");
-		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-		super.addViewControllers(registry);
-	}
+	
 	/**
 	 * 添加静态资源映射
 	 */
