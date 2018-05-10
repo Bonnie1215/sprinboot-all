@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.huyanqiu.springbootall.domain.base.User;
+import com.huyanqiu.springbootall.domain.dto.UserDto;
 import com.huyanqiu.springbootall.domain.vo.SysResult;
 import com.huyanqiu.springbootall.service.UserService;
 
@@ -36,6 +37,11 @@ public class UserController {
 	@RequestMapping("/update")
 	public SysResult update(@RequestBody User user) {
 		return userService.update(user);
+	}
+	
+	@RequestMapping("/list")
+	public SysResult list(@RequestBody UserDto userDto) {
+		return userService.list(userDto);
 	}
 	
 }

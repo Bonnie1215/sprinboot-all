@@ -1,5 +1,7 @@
 package com.huyanqiu.springbootall.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -17,5 +19,8 @@ public interface UserMapper extends MyMapper<User> {
 
 	@Update("UPDATE user SET username=#{username}, password=#{password} WHERE id=#{id}")
 	public int update(User user);
+
+	@Select("SELECT * FROM user")
+	public List<User> list();
 	
 }

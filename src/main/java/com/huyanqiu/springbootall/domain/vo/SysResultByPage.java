@@ -1,6 +1,9 @@
 package com.huyanqiu.springbootall.domain.vo;
 
 import java.util.Map;
+
+import com.github.pagehelper.PageInfo;
+
 import java.util.HashMap;
 
 /**
@@ -11,9 +14,9 @@ import java.util.HashMap;
 public class SysResultByPage {
 	
 	public static void main(String[] args) {
-//		PageInfo<String> pageInfo = new PageInfo<>();
-//		SysResult ok = SysResultByPage.ok(pageInfo.getList(), pageInfo.getTotal());
-//		System.out.println(ok);
+		PageInfo<String> pageInfo = new PageInfo<>();
+		SysResult ok = SysResultByPage.ok(pageInfo.getList(), pageInfo.getTotal());
+		System.out.println(ok);
 	}
 	
 	public static SysResult ok(Object data, Object total){
